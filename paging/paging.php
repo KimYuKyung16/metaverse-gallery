@@ -3,14 +3,14 @@
         $list_num = 5;
 
         /* paging : 한 블럭 당 페이지 수 */
-        $page_num = 5;
+        $page_num = 3;
 
         /* paging : 현재 페이지 */
         $page = isset($_GET["page"])? $_GET["page"] : 1;
 
-        $conn = mysqli_connect('localhost', 'kyk', '3909', 'gallery_db');
-        // $sql = "SELECT * FROM comment WHERE gallery='{$user}'"; /* 이 sql은 코멘트 뽑아내는 sql */
-        $sql = "SELECT * FROM users"; /* 이 sql은 갤러리 이름 뽑아내는 sql */
+        $conn = mysqli_connect('localhost', 'root', 'apmsetup', 'gallery_db');
+        $sql = "SELECT * FROM comment WHERE gallery='{$user}'"; /* 이 sql은 코멘트 뽑아내는 sql */
+        // $sql = "SELECT * FROM users"; /* 이 sql은 갤러리 이름 뽑아내는 sql */
         $result = mysqli_query($conn, $sql);
         $num= mysqli_num_rows($result); /* 일단 일시적으로 숨겨놓음 */
 
@@ -42,7 +42,7 @@
         $start = ($page - 1) * $list_num;
 
         /* paging : 쿼리 작성 - limit 몇번부터, 몇개 */
-        $conn = mysqli_connect('localhost', 'kyk', '3909', 'gallery_db');
+        $conn = mysqli_connect('localhost', 'root', 'apmsetup', 'gallery_db');
         
         if ($what_php == "index"){
             $sql = "SELECT * FROM users WHERE visable=1 limit $start, $list_num;";
