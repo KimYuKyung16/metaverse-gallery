@@ -79,6 +79,7 @@ hr {
 
 a {
   text-decoration: none;
+  color: white;
 }
 
 #s_gallery-list > li > a {
@@ -100,7 +101,7 @@ a {
   font-weight: bold;
 }
 
-#s_gallery-list > li:nth-child(1) {
+#s_gallery-list > li:nth-child(2) {
   background-color: rgb(129, 172, 252);
 }
 
