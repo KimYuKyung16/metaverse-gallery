@@ -33,7 +33,7 @@ body::-webkit-scrollbar {
 #scroll1{
     width: 100vw;
     height: 100vh;
-    background-color: rgb(57, 104, 88);
+    background-color: rgb(154, 169, 184);
     position: relative;
     
 }
@@ -41,32 +41,33 @@ body::-webkit-scrollbar {
 #scroll2{
     width: 100vw;
     height: 100vh;
-    background-color: rgb(57, 104, 88);
+    background-color: rgb(154, 169, 184);
     position: relative;
 }
 
 #scroll3{
     width: 100vw;
     height: 100vh;
-    background-color: rgb(57, 104, 88);
+    background-color: rgb(154, 169, 184);
     position: relative;
 }
 
 #scroll4{
     width: 100vw;
     height: 100vh;
-    background-color: rgb(57, 104, 88);
+    background-color: rgb(154, 169, 184);
     position: relative;
 }
 
 #gallery_finish{
     width: 100vw;
     height: 100vh;
-    background-color: rgb(57, 104, 88);
+    /* background-color: rgb(57, 104, 88); */
+    background-color: rgb(154, 169, 184);
     position: relative;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    /* align-items: center; */
+    /* justify-content: center; */
 }
 
 
