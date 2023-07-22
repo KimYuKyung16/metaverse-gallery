@@ -1,54 +1,33 @@
-<!DOCTYPE html>
-<html>
-<head>
-   <meta charset="utf-8">
-   <title></title>
-</head>
-<body>
-
 <?php
-session_start(); 
-header('Content-Type: charset=utf-8'); 
+session_start();
+header('Content-Type: charset=utf-8');
 
 $picture_num = $_GET['picture_num'];
 $title = $_POST['title'];
 $content = $_POST['content'];
 
 
-$conn = mysqli_connect('localhost', 'kyk', '3909', 'gallery_db');
-
-$profileImage = $dirName.$_FILES['a_file']['name'];
-
+$conn = mysqli_connect('localhost', 'root', 'apmsetup', 'gallery_db');
+$profileImage = $dirName . $_FILES['a_file']['name'];
 
 $uploaddir = '../image/';
-// $uploadfile = $uploaddir. basename($_FILES['a_file']['HELLO.JPG']);
-$name = "hello.jpg";
-$name1 = date('Y_m_d_his', time()).".JPG";
+$name1 = date('Y_m_d_his', time()) . ".JPG";
 
-if (move_uploaded_file($_FILES['a_file']['tmp_name'],$uploaddir.$name1)) {
+if (move_uploaded_file($_FILES['a_file']['tmp_name'], $uploaddir . $name1)) {
     echo 'sucess';
-    // $sql = "
-    //     INSERT INTO pictures
-    //     (u_id, picture_num, picture, title, content)
-    //     VALUES('{$_SESSION['id']}', '{$picture_num}', '{$name1}', '{$title}', '{$content}')";
-    // $result = mysqli_query($conn, $sql);
-    // if ($result === false) {
-    //     echo "저장에 문제가 생겼습니다. 관리자에게 문의해주세요.";
-    //     echo mysqli_error($conn);
-    // }
     $count  = 0;
 
     $sql = "
         SELECT * FROM pictures WHERE 
         u_id = '{$_SESSION['id']}' and picture_num = '$picture_num' ";
     $result = mysqli_query($conn, $sql);
-   
 
-    while($row = mysqli_fetch_array($result)){
-        $count ++;
-     }
 
-    if ($count == 0){
+    while ($row = mysqli_fetch_array($result)) {
+        $count++;
+    }
+
+    if ($count == 0) {
         echo "값 없다";
         $sql = "
             INSERT INTO pictures
@@ -59,8 +38,8 @@ if (move_uploaded_file($_FILES['a_file']['tmp_name'],$uploaddir.$name1)) {
             echo "저장에 문제가 생겼습니다. 관리자에게 문의해주세요.";
             echo mysqli_error($conn);
         }
-        header("location: picture_desc.php?picture_num=$picture_num");
-    }else{
+        header("location: pictureDescription.php?picture_num=$picture_num");
+    } else {
         echo "값 있다";
         $sql = "
             UPDATE pictures SET
@@ -68,10 +47,9 @@ if (move_uploaded_file($_FILES['a_file']['tmp_name'],$uploaddir.$name1)) {
             WHERE u_id = '{$_SESSION['id']}' and picture_num = '$picture_num'
             ";
         $result = mysqli_query($conn, $sql);
-        header("location: picture_desc.php?picture_num=$picture_num");
+        header("location: pictureDescription.php?picture_num=$picture_num");
     }
-}
-else{
+} else {
     echo 'fail';
 }
 
@@ -87,13 +65,13 @@ if ($title != null) {
         SELECT * FROM pictures WHERE 
         u_id = '{$_SESSION['id']}' and picture_num = '$picture_num' ";
     $result = mysqli_query($conn, $sql);
-   
 
-    while($row = mysqli_fetch_array($result)){
-        $count ++;
-     }
 
-    if ($count == 0){
+    while ($row = mysqli_fetch_array($result)) {
+        $count++;
+    }
+
+    if ($count == 0) {
         echo "값 없다";
         $sql = "
             INSERT INTO pictures
@@ -104,8 +82,8 @@ if ($title != null) {
             echo "저장에 문제가 생겼습니다. 관리자에게 문의해주세요.";
             echo mysqli_error($conn);
         }
-        header("location: picture_desc.php?picture_num=$picture_num");
-    }else{
+        header("location: pictureDescription.php?picture_num=$picture_num");
+    } else {
         echo "값 있다";
         $sql = "
             UPDATE pictures SET
@@ -113,16 +91,10 @@ if ($title != null) {
             WHERE u_id = '{$_SESSION['id']}' and picture_num = '$picture_num'
             ";
         $result = mysqli_query($conn, $sql);
-        header("location: picture_desc.php?picture_num=$picture_num");
+        header("location: pictureDescription.php?picture_num=$picture_num");
     }
-}
-else{
+} else {
     echo 'fail';
 }
 
 ?>
-
- 
-
-</body>
-
