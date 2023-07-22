@@ -3,26 +3,37 @@
   padding: 0;
 }
 
-/* .popular_gallery_list {
-  background-color: rgb(177, 177, 177);
-  font-size: 50px;
-} */
-
 .main_div {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: row;
-  /* width: 100vw; */
-  background-color: rgb(37, 32, 26);
+  background-color: rgb(36, 35, 34);
+  position: relative;
 }
 
-.popular_gallery_list-table tr td a{
-  font-size: 40px;
+#main_frame {
+  position: absolute;
+}
+
+#thumbnail-div > img {
+  position: absolute;
+}
+
+#thumbnail-div > ul {
+  position: sticky;
+}
+
+#popular_gallery {
+  color: white;
+}
+
+.popular_gallery_list-table tr td a {
+  font-size: 30px;
   color: rgb(131, 131, 131);
   text-decoration: none;
   padding-left: 10px;
-  font-family: 'East Sea Dokdo', cursive;
+  font-family: "Gowun Dodum", sans-serif;
 }
 
 .popular_gallery_list_div {
@@ -30,24 +41,20 @@
 }
 
 .popular_gallery_list-table {
-  /* border: 1px solid #444444; */
   border-collapse: collapse;
   width: 600px;
   border-collapse: separate;
   border-spacing: 0px 30px;
- 
 }
 
 .p_galllery_list_icon {
   margin: 5px;
 }
 
-
-.popular_gallery_list-table tr td{
+.popular_gallery_list-table tr td {
   padding: 10px;
   border-radius: 10px;
   background-color: rgb(255, 255, 255);
-  /* width: 100%; */
   display: flex;
   align-items: center;
 }
@@ -63,18 +70,13 @@
   height: 500px;
   overflow: hidden;
   margin-right: 100px;
-  padding: 20px 0px 80px 0px;
+  padding: 25px 0px 80px 0px;
+  margin-left: 25px;
 }
 
-
-#thumbnail_list{
-  /* width: 300px;
-  height: 200px; */
+#thumbnail_list {
   display: flex;
   flex-direction: row;
-  /* width: 700px; */
-  /* height: 200px; */
-  /* overflow: hidden; */
 }
 
 li {

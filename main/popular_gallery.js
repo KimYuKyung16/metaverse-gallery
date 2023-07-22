@@ -44,22 +44,7 @@ function mouse_out(list, td_list){ //마우스를 뗐을 때
 
 function mouse_over(num, list, td_list){ //마우스를 올렸을 때
   thumbnail_list.style.transform = "translateX(" + (-800 * num) + "px)";
-  list.style.color = "#FFBF00";
+  list.style.color = "White";
   list.style.fontWeight = "Bold"
-  td_list.style.backgroundColor = "#F7F8E0"
+  td_list.style.backgroundColor = "rgb(129, 172, 252)"
 }
-
-
-
-
-// name0.onmouseover = function(){
-//   $("#thumbnail_list").css('transform', "translateX("+ 0 + "px)");
-// }
-
-// name1.onmouseover = function(){
-//   $("#test").css('transform', "translateX("+ (1 * -700) + "px)");
-// }
-
-// name2.onmouseover = function(){
-//   $("#test").css('transform', "translateX("+ (2 * -700) + "px)");
-// }
