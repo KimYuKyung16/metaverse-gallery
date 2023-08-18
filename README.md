@@ -62,7 +62,3 @@ $ git clone https://github.com/KimYuKyung16/metaverse-gallery.git
 <img src="https://github.com/KimYuKyung16/metaverse-gallery/assets/81006438/41584c42-1ac2-4af2-b30d-33ef4c0f1d7d"/>
 
 > `메타버스`: 관리자가 제공한 메타버스 링크를 통해 해당 갤러리의 메타버스로 접속할 수 있습니다.
-
-<img src="https://github.com/KimYuKyung16/metaverse-gallery/assets/81006438/9bee79ea-4802-4453-8c86-2dd5bd819081"/>
-
-> `관리자 정보`: 관리자로 로그인해서 내 정보를 클릭하면 해당 화면이 나옵니다. 전시 기간이 끝난 갤러리를 직접 삭제할 수 있고, 메타버스 제작이 필요한 유저에게 해당 갤러리의 메타버스를 제작한 후 링크를 보내줄 수 있습니다. 
